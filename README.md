@@ -128,6 +128,30 @@ kubectl apply -f ingress.yml
 - Use Helm charts for deployment
 - Add monitoring (Prometheus + Grafana)
 
+## 🌐 Application Outputs
+
+### 🔹 Frontend via NodePort (Port 30080)
+Accessing the application externally using NodePort service.
+
+![Frontend NodePort](https://github.com/user-attachments/assets/6c955dfe-1704-409e-8d6e-c7620191aa26)
+
+---
+
+### 🔹 Frontend UI (Ingress / Service Access)
+Frontend application successfully rendered in the browser.
+
+![Frontend UI](https://github.com/user-attachments/assets/0e544f94-3781-4ea0-9a2f-6d675179372f)
+
+---
+
+### 🔹 Backend API Response
+Backend service responding correctly to API requests.
+
+![Backend API](https://github.com/user-attachments/assets/3dea0760-089b-41a2-826b-bea097e23403)
+
+
+
+
 # Author:
 
 ## Rohit Shinde
