@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-fe-deployment
+  labels:
+    app: project-fe
+    env: production
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: project-app-fe
+      env: production
+  template:
+    metadata:
+      name: project-app-fe-pod
+      labels:
+        app: project-app-fe
+        env: production
+    spec:
+      serviceAccountName: default
+      containers:
+      - name: project-app-fe-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

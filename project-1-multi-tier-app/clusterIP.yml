@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service-cluster-ip-dec-2025
+  namespace: iot-nsp
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+    env: qa
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

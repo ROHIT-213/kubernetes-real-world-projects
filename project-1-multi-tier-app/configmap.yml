@@ -1,0 +1,35 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata: 
+#   name: configmap
+#   namespace: iot-nsp
+# data:
+#   nginx.conf: |
+#     events {
+#       worker_connections 1024;
+#     }
+#     http {
+#       server {
+#         listen 80;
+#         location / {
+#           root /usr/share/nginx/html;
+#           index index.html;
+#         }
+#       }
+#     }
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+  namespace: iot-nsp
+data:
+  nginx.conf: |
+    server {
+      listen 80;
+      location / {
+        root /usr/share/nginx/html;
+        index index.html;
+      }
+    }
+ 

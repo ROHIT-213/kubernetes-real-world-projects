@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: iot-ns-standard
+  namespace: iot-nsp
+spec:
+  accessModes:
+    - ReadWriteOnce
+  #code added
+  volumeMode: Filesystem
+  storageClassName: ""
+  volumeName: pv001-iot
+  #for volume
+  resources:
+    requests:
+      storage: 1Gi

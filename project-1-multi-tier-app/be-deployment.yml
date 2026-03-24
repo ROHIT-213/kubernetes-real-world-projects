@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-be-deployment
+  labels:
+    app: project-be
+    env: production
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: project-app-be
+      env: production
+  template:
+    metadata:
+      name: project-app-be-pod
+      labels:
+        app: project-app-be
+        env: production
+    spec:
+      containers:
+      - name: project-app-be-container
+        image: rohit213/project-1:v1.1
+        ports:
+        - containerPort: 3000
