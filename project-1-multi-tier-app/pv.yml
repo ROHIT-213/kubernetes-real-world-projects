@@ -17,10 +17,10 @@ kind: PersistentVolume
 metadata:
   name: pv001-iot
 spec:
-  capacity:-
+  capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /tmp/data/pv001
+    path: "/tmp/data/pv001"
   persistentVolumeReclaimPolicy: Recycle
